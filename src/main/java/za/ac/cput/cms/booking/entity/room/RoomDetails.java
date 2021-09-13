@@ -1,5 +1,11 @@
 package za.ac.cput.cms.booking.entity.room;
 
+/**
+ * Author: Justin Jenecke 215163052
+ * POJO RoomDetails.ENUM
+ * Created: 13/09/2021
+ * */
+
 public enum RoomDetails {
 
     FIRST_FLOOR(1, 300.00),

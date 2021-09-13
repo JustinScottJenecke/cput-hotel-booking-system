@@ -1,5 +1,12 @@
 package za.ac.cput.cms.booking.entity.room;
 
+/**
+ * Author: Justin Jenecke 215163052
+ * POJO CalendarMonth.Class
+ * Created: 13/09/2021
+ * */
+
+
 import java.time.LocalDate;
 import java.util.Set;
 

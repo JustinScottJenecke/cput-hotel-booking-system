@@ -1,5 +1,12 @@
 package za.ac.cput.cms.booking.entity.room;
 
+/**
+ * Author: Justin Jenecke 215163052
+ * POJO Room.Class
+ * Created: 13/09/2021
+ * */
+
+
 public class Room {
 
     private int roomNo;

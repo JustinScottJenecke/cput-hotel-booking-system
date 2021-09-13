@@ -17,7 +17,9 @@ public class Booking {
     private List<LocalDate> daysBooked;
     private int cost;
 
-    public Booking(Builder b) {
+    protected Booking(){}
+
+    private Booking(Builder b) {
         this.bookingId = b.bookingId;
         this.room = b.room;
         this.guest = b.guest;

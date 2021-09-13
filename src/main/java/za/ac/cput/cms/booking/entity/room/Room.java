@@ -16,7 +16,9 @@ public class Room {
     private BookingCalendar bookingCalendar;
     private double cost;
 
-    public Room(Builder b) {
+    protected Room(){}
+
+    private Room(Builder b) {
         this.roomNo = b.roomNo;
         this.bedType = b.bedType;
         this.roomType = b.roomType;

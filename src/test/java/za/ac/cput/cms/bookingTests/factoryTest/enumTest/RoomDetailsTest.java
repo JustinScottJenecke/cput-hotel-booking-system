@@ -1,7 +1,13 @@
 package za.ac.cput.cms.bookingTests.factoryTest.enumTest;
 
+/**
+ * Author: Justin Jenecke 215163052
+ * Test for RoomDetails.ENUM and other enums used in project
+ * Created: 14/09/2021
+ * */
+
+
 import org.junit.jupiter.api.Test;
-import za.ac.cput.cms.booking.entity.room.Room;
 import za.ac.cput.cms.booking.entity.room.RoomDetails;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

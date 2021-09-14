@@ -12,7 +12,7 @@ public class Room {
     private int roomNo;
     private int bedType;
     private int roomType;
-    private int roomDetails;
+    private RoomDetails roomDetails;
     private BookingCalendar bookingCalendar;
     private double cost;
 
@@ -39,7 +39,7 @@ public class Room {
         return roomType;
     }
 
-    public int getRoomDetails() {
+    public RoomDetails getRoomDetails() {
         return roomDetails;
     }
 
@@ -68,7 +68,7 @@ public class Room {
         private int roomNo;
         private int bedType;
         private int roomType;
-        private int roomDetails;
+        private RoomDetails roomDetails;
         private BookingCalendar bookingCalendar;
         private double cost;
 
@@ -87,7 +87,7 @@ public class Room {
             return this;
         }
 
-        public Builder setRoomDetails(int roomDetails) {
+        public Builder setRoomDetails(RoomDetails roomDetails) {
             this.roomDetails = roomDetails;
             return this;
         }

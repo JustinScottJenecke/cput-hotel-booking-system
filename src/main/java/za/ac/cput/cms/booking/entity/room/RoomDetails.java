@@ -17,6 +17,8 @@ public enum RoomDetails {
     private double cost;
 
     RoomDetails(int floor, double cost) {
+        this.cost = cost;
+        this.floor = floor;
     }
 
     public int getFloor() {
@@ -25,6 +27,14 @@ public enum RoomDetails {
 
     public double getCost() {
         return cost;
+    }
+
+    public static RoomDetails findByFloor(int floorInput) {
+        for (RoomDetails detail: RoomDetails.values()) {
+            if (detail.floor == floorInput)
+                return detail;
+        }
+        return null;
     }
 
 }

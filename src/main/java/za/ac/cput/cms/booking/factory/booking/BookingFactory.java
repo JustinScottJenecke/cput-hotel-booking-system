@@ -14,7 +14,7 @@ import java.util.List;
 
 public class BookingFactory {
 
-    public Booking buildBooking(String bookingId, int room, int guest, int baseCost) {
+    public static Booking buildBooking(String bookingId, int room, int guest, int baseCost) {
 
         Booking booking = new Booking.Builder()
                 .setBookingId(bookingId)

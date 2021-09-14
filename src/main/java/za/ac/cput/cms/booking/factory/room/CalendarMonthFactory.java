@@ -7,13 +7,13 @@ import java.util.HashSet;
 
 /**
  * Author: Justin Jenecke 215163052
- * Test for CalendarMonthFactory.Class
+ * Factory class for creating instances of CalendarMonth.Class
  * Created: 14/09/2021
  * */
 
 public class CalendarMonthFactory {
 
-    public CalendarMonth buildCalendarMonth(String id, String name, HashSet<LocalDate> calendarDates) {
+    public static CalendarMonth buildCalendarMonth(String id, String name, HashSet<LocalDate> calendarDates) {
 
         CalendarMonth calendarMonth = new CalendarMonth.Builder()
                 .setId(id)

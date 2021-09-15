@@ -7,7 +7,9 @@ package za.ac.cput.cms.booking.repository.booking;
  * */
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.cms.booking.entity.booking.Booking;
 
+@Repository
 public interface IBookingRepository extends JpaRepository <Booking, String> {
 }

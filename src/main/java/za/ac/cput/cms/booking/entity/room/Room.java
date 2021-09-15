@@ -1,5 +1,7 @@
 package za.ac.cput.cms.booking.entity.room;
 
+import za.ac.cput.cms.booking.entity.room.detailObjects.RoomDetails;
+
 /**
  * Author: Justin Jenecke 215163052
  * POJO Room.Class

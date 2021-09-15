@@ -2,9 +2,10 @@
 # CPUT-Hotel-Booking-System
 Compiled and written by: Justin Jenecke - 215163052
 
+Date compiled: 14 September 2021
+
 ## Management system for hotel booking operations.
-  
-  
+
   This project is a reboot of previous project with more consideration for DDD, 
   less workload and more focus on developing a microservice within the bounded context of a booking system.
 

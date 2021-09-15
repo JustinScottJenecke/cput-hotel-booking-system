@@ -1,11 +1,8 @@
 package za.ac.cput.cms.booking.factory.room;
 
 import za.ac.cput.cms.booking.entity.room.BookingCalendar;
-import za.ac.cput.cms.booking.entity.room.CalendarMonth;
 import za.ac.cput.cms.booking.entity.room.Room;
-import za.ac.cput.cms.booking.entity.room.RoomDetails;
-
-import java.util.ArrayList;
+import za.ac.cput.cms.booking.entity.room.detailObjects.RoomDetails;
 
 /**
  * Author: Justin Jenecke 215163052

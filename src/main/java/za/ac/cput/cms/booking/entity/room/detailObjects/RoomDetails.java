@@ -1,4 +1,4 @@
-package za.ac.cput.cms.booking.entity.room;
+package za.ac.cput.cms.booking.entity.room.detailObjects;
 
 /**
  * Author: Justin Jenecke 215163052

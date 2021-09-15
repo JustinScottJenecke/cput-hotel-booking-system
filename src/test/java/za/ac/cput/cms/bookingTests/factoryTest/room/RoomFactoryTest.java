@@ -5,10 +5,9 @@ import org.junit.jupiter.api.Test;
 import za.ac.cput.cms.booking.entity.room.BookingCalendar;
 import za.ac.cput.cms.booking.entity.room.CalendarMonth;
 import za.ac.cput.cms.booking.entity.room.Room;
-import za.ac.cput.cms.booking.entity.room.RoomDetails;
+import za.ac.cput.cms.booking.entity.room.detailObjects.RoomDetails;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

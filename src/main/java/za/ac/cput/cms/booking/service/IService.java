@@ -6,11 +6,11 @@ package za.ac.cput.cms.booking.service;
  * Created: 15/09/2021
  * */
 
-public interface IService <T, Id> {
+public interface IService <T, ID > {
 
-    T create(T type);
-    T read(Id id);
-    T update(T type);
-    boolean delete(Id id);
+    T create(T object);
+    T read(ID id);
+    T update(ID object);
+    boolean delete(ID id);
 
 }

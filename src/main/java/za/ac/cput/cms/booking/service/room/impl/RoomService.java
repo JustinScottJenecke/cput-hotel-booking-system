@@ -13,7 +13,29 @@ import za.ac.cput.cms.booking.service.room.IRoomService;
  * */
 
 @Service
-public class RoomService {
+public class RoomService implements IRoomService {
 
+    @Autowired
+    private IRoomRepository roomRepository;
 
+    @Override
+    public Room create(Room room) {
+        return this.roomRepository.save(room);
+    }
+
+    @Override
+    public Room read(Integer integer) {
+        return this.roomRepository.findById(integer).orElseGet(null);
+    }
+
+    @Override
+    public Room update(Room room) {
+        return this.roomRepository.save(room);
+    }
+
+    @Override
+    public boolean delete(Integer integer) {
+        this.roomRepository.deleteById(integer);
+        return !this.roomRepository.existsById(integer);
+    }
 }

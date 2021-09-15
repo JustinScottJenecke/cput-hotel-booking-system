@@ -2,7 +2,7 @@ package za.ac.cput.cms.booking.factory.room;
 
 import za.ac.cput.cms.booking.entity.room.BookingCalendar;
 import za.ac.cput.cms.booking.entity.room.Room;
-import za.ac.cput.cms.booking.entity.room.detailObjects.RoomDetails;
+import za.ac.cput.cms.booking.entity.room.roomObjects.RoomDetails;
 
 /**
  * Author: Justin Jenecke 215163052

@@ -6,15 +6,23 @@ package za.ac.cput.cms.booking.entity.room;
  * Created: 13/09/2021
  * */
 
-
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
 
+@Entity
 public class CalendarMonth {
 
+    @Id
     private String id;
+
     private String name;
-    private Set <LocalDate> calenderDates;
+
+    @ManyToOne
+    private BookingCalendar bookingCalendar;
+
+    @ElementCollection
+    private Set<LocalDate> calenderDates;
 
     protected CalendarMonth(){}
 

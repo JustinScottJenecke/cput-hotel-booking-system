@@ -8,7 +8,7 @@ package za.ac.cput.cms.bookingTests.factoryTest.enumTest;
 
 
 import org.junit.jupiter.api.Test;
-import za.ac.cput.cms.booking.entity.room.detailObjects.RoomDetails;
+import za.ac.cput.cms.booking.entity.room.roomObjects.RoomDetails;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

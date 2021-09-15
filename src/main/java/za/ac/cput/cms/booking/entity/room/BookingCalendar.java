@@ -6,11 +6,18 @@ package za.ac.cput.cms.booking.entity.room;
  * Created: 13/09/2021
  * */
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
 
+@Entity
 public class BookingCalendar {
 
+    @Id
     private String id;
+
+    @OneToMany
     private List<CalendarMonth> calendarMonths;
 
     protected BookingCalendar() {

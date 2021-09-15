@@ -23,7 +23,7 @@ public class BookingFactoryTest {
     @Test
     void buildBooking() {
 
-        List<LocalDate> stayDuration = new ArrayList<>();
+        int stayDuration = new ArrayList<>();
 
         Booking booking = new Booking.Builder()
                 .setBookingId("SHA-2-b")

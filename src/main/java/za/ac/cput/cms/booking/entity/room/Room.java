@@ -1,6 +1,10 @@
 package za.ac.cput.cms.booking.entity.room;
 
-import za.ac.cput.cms.booking.entity.room.detailObjects.RoomDetails;
+import za.ac.cput.cms.booking.entity.room.roomObjects.RoomDetails;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  * Author: Justin Jenecke 215163052
@@ -8,15 +12,19 @@ import za.ac.cput.cms.booking.entity.room.detailObjects.RoomDetails;
  * Created: 13/09/2021
  * */
 
-
+@Entity
 public class Room {
 
+    @Id
     private int roomNo;
+
     private int bedType;
     private int roomType;
     private RoomDetails roomDetails;
-    private BookingCalendar bookingCalendar;
     private double cost;
+
+    @OneToOne
+    private BookingCalendar bookingCalendar;
 
     protected Room(){}
 

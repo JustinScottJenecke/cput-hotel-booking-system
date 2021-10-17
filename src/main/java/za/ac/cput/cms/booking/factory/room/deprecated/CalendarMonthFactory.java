@@ -1,6 +1,4 @@
-package za.ac.cput.cms.booking.factory.room;
-
-import za.ac.cput.cms.booking.entity.room.CalendarMonth;
+package za.ac.cput.cms.booking.factory.room.deprecated;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -10,8 +8,10 @@ import java.util.HashSet;
  * Factory class for creating instances of CalendarMonth.Class
  * Created: 14/09/2021
  * */
-
-public class CalendarMonthFactory {
+/*
+@Deprecated
+public class
+CalendarMonthFactory {
 
     public static CalendarMonth buildCalendarMonth(String id, String name, HashSet<LocalDate> calendarDates) {
 
@@ -25,3 +25,4 @@ public class CalendarMonthFactory {
     }
 
 }
+*/

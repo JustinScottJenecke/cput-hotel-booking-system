@@ -1,11 +1,4 @@
-package za.ac.cput.cms.bookingTests.factoryTest.room;
-
-import org.junit.jupiter.api.Test;
-import za.ac.cput.cms.booking.entity.room.CalendarMonth;
-
-import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
+package za.ac.cput.cms.bookingTests.factoryTest.roomTest.deprecated;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -15,8 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Created: 14/09/2021
  * */
 
-public class CalendarMonthFactoryTest {
-
+@Deprecated
+public class CalendarMonthFactoryTest {}
+/*
     //Setting name to name of month might be redundant if id contains
     //month and year, but formats of both are not finalized yet.
 
@@ -36,3 +30,4 @@ public class CalendarMonthFactoryTest {
 
     }
 }
+*/

@@ -1,8 +1,10 @@
 package za.ac.cput.cms.booking.factory.room;
 
-import za.ac.cput.cms.booking.entity.room.BookingCalendar;
 import za.ac.cput.cms.booking.entity.room.Room;
 import za.ac.cput.cms.booking.entity.room.roomObjects.RoomDetails;
+
+import java.time.LocalDate;
+import java.util.Set;
 
 /**
  * Author: Justin Jenecke 215163052
@@ -16,7 +18,7 @@ public class RoomFactory {
                                  int bedType,
                                  int roomType,
                                  RoomDetails roomDetails,
-                                 BookingCalendar bookingCalendar,
+                                 Set<LocalDate> bookingCalendar,
                                  int cost) {
 
         Room room = new Room.Builder()
@@ -32,3 +34,4 @@ public class RoomFactory {
     }
 
 }
+

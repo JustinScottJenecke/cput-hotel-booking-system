@@ -1,4 +1,4 @@
-package za.ac.cput.cms.booking.entity.room;
+package za.ac.cput.cms.booking.entity.room.deprecated;
 
 /**
  * Author: Justin Jenecke 215163052
@@ -10,9 +10,9 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
 
-@Entity
-public class CalendarMonth {
-
+@Deprecated
+public class CalendarMonth {}
+/*
     @Id
     private String id;
 
@@ -77,3 +77,4 @@ public class CalendarMonth {
         }
     }
 }
+*/

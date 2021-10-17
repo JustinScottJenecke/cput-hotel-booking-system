@@ -1,13 +1,13 @@
-package za.ac.cput.cms.bookingTests.factoryTest.room;
+package za.ac.cput.cms.bookingTests.factoryTest.roomTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import za.ac.cput.cms.booking.entity.room.BookingCalendar;
-import za.ac.cput.cms.booking.entity.room.CalendarMonth;
 import za.ac.cput.cms.booking.entity.room.Room;
 import za.ac.cput.cms.booking.entity.room.roomObjects.RoomDetails;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -20,15 +20,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class RoomFactoryTest {
 
-    BookingCalendar bookingCalendar;
+    Set<LocalDate> bookingCalendar;
 
     @BeforeEach
     void setup() {
 
-         bookingCalendar = new BookingCalendar.Builder()
-                .setId("SHA-2")
-                .setCalendarMonths(new ArrayList<CalendarMonth>())
-                .build();
+         bookingCalendar = new HashSet<>();
     }
 
     @Test
@@ -49,8 +46,8 @@ public class RoomFactoryTest {
 
         //Make sure details exist at floor of integer value(2)
         //Can throw null pointer exception
-        assertNotNull(details);
 
+        assertNotNull(details);
         assertEquals(101, room.getRoomNo());
         assertEquals(2, room.getBedType());
         assertEquals(5, room.getRoomType());

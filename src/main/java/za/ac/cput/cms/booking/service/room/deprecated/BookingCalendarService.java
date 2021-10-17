@@ -1,22 +1,16 @@
-package za.ac.cput.cms.booking.service.room.impl;
+package za.ac.cput.cms.booking.service.room.deprecated;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import za.ac.cput.cms.booking.entity.room.BookingCalendar;
-import za.ac.cput.cms.booking.repository.booking.IBookingRepository;
-import za.ac.cput.cms.booking.repository.room.IBookingCalendarRepository;
-import za.ac.cput.cms.booking.service.room.IBookingCalendarService;
-
-import javax.xml.ws.Action;
 
 /**
  * Author: Justin Jenecke 215163052
  * Service class exposing repository methods for BookingCalendar.Class
  * Created: 15/09/2021
  * */
-
+/*
+@Deprecated
 @Service
-public class BookingCalendarService implements IBookingCalendarService {
+public class BookingCalendarService {}
 
     @Autowired
     private IBookingCalendarRepository bookingCalendarRepository;
@@ -42,3 +36,4 @@ public class BookingCalendarService implements IBookingCalendarService {
         return !this.bookingCalendarRepository.existsById(s);
     }
 }
+*/

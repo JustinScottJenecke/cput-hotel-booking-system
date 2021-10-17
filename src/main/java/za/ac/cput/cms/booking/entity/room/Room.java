@@ -2,9 +2,12 @@ package za.ac.cput.cms.booking.entity.room;
 
 import za.ac.cput.cms.booking.entity.room.roomObjects.RoomDetails;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import java.time.LocalDate;
+import java.util.Set;
 
 /**
  * Author: Justin Jenecke 215163052
@@ -23,8 +26,8 @@ public class Room {
     private RoomDetails roomDetails;
     private double cost;
 
-    @OneToOne
-    private BookingCalendar bookingCalendar;
+    @ElementCollection
+    private Set<LocalDate> bookingCalendar;
 
     protected Room(){}
 
@@ -53,7 +56,7 @@ public class Room {
         return roomDetails;
     }
 
-    public BookingCalendar getBookingCalendar() {
+    public Set<LocalDate> getBookingCalendar() {
         return bookingCalendar;
     }
 
@@ -79,7 +82,7 @@ public class Room {
         private int bedType;
         private int roomType;
         private RoomDetails roomDetails;
-        private BookingCalendar bookingCalendar;
+        private Set<LocalDate> bookingCalendar;
         private double cost;
 
         public Builder setRoomNo(int roomNo) {
@@ -102,7 +105,7 @@ public class Room {
             return this;
         }
 
-        public Builder setBookingCalendar(BookingCalendar bookingCalendar) {
+        public Builder setBookingCalendar(Set<LocalDate> bookingCalendar) {
             this.bookingCalendar = bookingCalendar;
             return this;
         }

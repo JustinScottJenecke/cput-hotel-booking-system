@@ -1,11 +1,4 @@
-package za.ac.cput.cms.bookingTests.factoryTest.room;
-
-import org.junit.jupiter.api.Test;
-import za.ac.cput.cms.booking.entity.room.BookingCalendar;
-import za.ac.cput.cms.booking.entity.room.CalendarMonth;
-
-import java.util.ArrayList;
-import java.util.List;
+package za.ac.cput.cms.bookingTests.factoryTest.roomTest.deprecated;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -15,14 +8,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Created: 14/09/2021
  * */
 
-public class BookingCalendarFactoryTest {
-
+@Deprecated
+public class BookingCalendarFactoryTest {}
+/*
     List<CalendarMonth> testData = new ArrayList<>();
 
     @Test
     void buildBookingCalendar() {
 
-        BookingCalendar bookingCalendar = new BookingCalendar.Builder()
+        Set<LocalDate> bookingCalendar = new BookingCalendar.Builder()
                 .setId("SHA-2")
                 .setCalendarMonths(new ArrayList<CalendarMonth>())
                 .build();
@@ -32,3 +26,4 @@ public class BookingCalendarFactoryTest {
 
     }
 }
+*/

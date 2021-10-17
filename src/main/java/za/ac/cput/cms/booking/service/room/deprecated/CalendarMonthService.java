@@ -1,19 +1,14 @@
-package za.ac.cput.cms.booking.service.room.impl;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import za.ac.cput.cms.booking.entity.room.CalendarMonth;
-import za.ac.cput.cms.booking.repository.room.ICalendarMonthRepository;
-import za.ac.cput.cms.booking.service.room.ICalendarMonthService;
+package za.ac.cput.cms.booking.service.room.deprecated;
 
 /**
  * Author: Justin Jenecke 215163052
  * Service class exposing repository methods for CalendarMonth.Class
  * Created: 15/09/2021
  * */
-
-@Service
-public class CalendarMonthService implements ICalendarMonthService {
+/*
+@Deprecated
+//@Service
+public class CalendarMonthService implements ICalendarMonthService {}
 
     @Autowired
     private ICalendarMonthRepository calendarMonthRepository;
@@ -39,3 +34,4 @@ public class CalendarMonthService implements ICalendarMonthService {
         return !this.calendarMonthRepository.existsById(s);
     }
 }
+*/

@@ -1,4 +1,4 @@
-package za.ac.cput.cms.booking.entity.room;
+package za.ac.cput.cms.booking.entity.room.deprecated;
 
 /**
  * Author: Justin Jenecke 215163052
@@ -9,11 +9,13 @@ package za.ac.cput.cms.booking.entity.room;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
-@Entity
-public class BookingCalendar {
-
+@Deprecated
+public class BookingCalendar {}
+/*
     @Id
     private String id;
 
@@ -65,8 +67,9 @@ public class BookingCalendar {
             return this;
         }
 
-        public BookingCalendar build() {
+        public Set<LocalDate> build() {
             return new BookingCalendar(this);
         }
     }
 }
+*/

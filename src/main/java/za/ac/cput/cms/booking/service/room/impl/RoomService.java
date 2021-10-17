@@ -8,7 +8,7 @@ import za.ac.cput.cms.booking.service.room.IRoomService;
 
 /**
  * Author: Justin Jenecke 215163052
- * Service class exposing repository methods for Room.Class
+ * Service class for exposing repository methods, and business logic for Room.Class
  * Created: 15/09/2021
  * */
 

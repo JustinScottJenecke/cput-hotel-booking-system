@@ -2,10 +2,7 @@ package za.ac.cput.cms.booking.entity.room;
 
 import za.ac.cput.cms.booking.entity.room.roomObjects.RoomDetails;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -23,7 +20,10 @@ public class Room {
 
     private int bedType;
     private int roomType;
+
+    @Enumerated
     private RoomDetails roomDetails;
+
     private double cost;
 
     @ElementCollection

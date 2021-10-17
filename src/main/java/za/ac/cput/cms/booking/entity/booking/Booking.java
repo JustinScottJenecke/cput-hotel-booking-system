@@ -6,9 +6,11 @@ package za.ac.cput.cms.booking.entity.booking;
  * Created: 13/09/2021
  * */
 
+import org.apache.tomcat.jni.Local;
+
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Booking {
@@ -18,7 +20,10 @@ public class Booking {
 
     private int room;
     private int guest;
-    private int daysBooked;
+
+    @ElementCollection
+    private Set <LocalDate> daysBooked;
+
     private int cost;
 
     protected Booking(){}
@@ -43,7 +48,7 @@ public class Booking {
         return guest;
     }
 
-    public int getDaysBooked() {
+    public Set<LocalDate> getDaysBooked() {
         return daysBooked;
     }
 
@@ -67,7 +72,7 @@ public class Booking {
         private String bookingId;
         private int room;
         private int guest;
-        private int daysBooked;
+        private Set <LocalDate> daysBooked;
         private int cost;
 
         public Builder setBookingId(String bookingId) {
@@ -85,7 +90,7 @@ public class Booking {
             return this;
         }
 
-        public Builder setDaysBooked(int daysBooked) {
+        public Builder setDaysBooked(Set<LocalDate> daysBooked) {
             this.daysBooked = daysBooked;
             return this;
         }

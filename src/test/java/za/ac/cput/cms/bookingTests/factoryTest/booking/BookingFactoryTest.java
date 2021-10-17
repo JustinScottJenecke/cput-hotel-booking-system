@@ -1,11 +1,13 @@
 package za.ac.cput.cms.bookingTests.factoryTest.booking;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.cms.booking.entity.booking.Booking;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,19 +20,24 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BookingFactoryTest {
 
-    List <LocalDate> testDataList = new ArrayList<>();
+    Set<LocalDate> testDataList;
+    Set <LocalDate> stayDuration;
+
+    @BeforeEach
+    void setup() {
+        testDataList = new HashSet<>();
+        stayDuration = new HashSet<>();
+    }
 
     @Test
     void buildBooking() {
-
-        int stayDuration = new ArrayList<>();
 
         Booking booking = new Booking.Builder()
                 .setBookingId("SHA-2-b")
                 .setRoom(2)
                 .setGuest(2)
                 .setDaysBooked(stayDuration)
-                .setCost(2000 * stayDuration.size())
+                .setCost(2000 * stayDuration.toArray().length)
                 .build();
 
         assertEquals("SHA-2-b",booking.getBookingId());

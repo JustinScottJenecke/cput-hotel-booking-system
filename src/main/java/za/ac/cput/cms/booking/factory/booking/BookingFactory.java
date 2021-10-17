@@ -3,8 +3,7 @@ package za.ac.cput.cms.booking.factory.booking;
 import za.ac.cput.cms.booking.entity.booking.Booking;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 /**
  * Author: Justin Jenecke 215163052
@@ -14,13 +13,13 @@ import java.util.List;
 
 public class BookingFactory {
 
-    public static Booking buildBooking(String bookingId, int room, int guest, int baseCost) {
+    public static Booking buildBooking(String bookingId, int room, int guest, Set<LocalDate>daysBooked, int baseCost) {
 
         Booking booking = new Booking.Builder()
                 .setBookingId(bookingId)
                 .setRoom(room)
                 .setGuest(guest)
-                .setDaysBooked(new ArrayList<LocalDate>())
+                .setDaysBooked(daysBooked)
                 .setCost(baseCost)
                 .build();
 

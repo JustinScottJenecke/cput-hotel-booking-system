@@ -12,7 +12,7 @@ public class ContactDetails {
     private String email;
     private String address;
 
-    private ContactDetails(){
+    protected ContactDetails(){
 
     }
 

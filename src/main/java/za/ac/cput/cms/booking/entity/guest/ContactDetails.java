@@ -6,8 +6,13 @@ ContactDetails.java
  */
 package za.ac.cput.cms.booking.entity.guest;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ContactDetails {
-    private int contactId;
+    @Id
+    private  String contactId;
     private int cellNo;
     private String email;
     private String address;
@@ -23,7 +28,7 @@ public class ContactDetails {
         this.address = b.address;
     }
 
-    public int getContactId() {
+    public String getContactId() {
         return contactId;
     }
     public int getCellNo(){
@@ -47,12 +52,12 @@ public class ContactDetails {
     }
 
     public static class Builder{
-        private int contactId;
+        private String contactId;
         private int cellNo;
         private String email;
         private String address;
 
-        public Builder setContactId(int contactId){
+        public Builder setContactId(String contactId){
             this.contactId = contactId;
             return this;
         }

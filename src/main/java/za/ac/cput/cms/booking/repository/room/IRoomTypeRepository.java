@@ -1,3 +1,10 @@
+/**
+ * IRoomTypeRepository.java
+ * Repository interface for RoomType
+ * Author: Kevin Michael Karelse (219000859)
+ * Date:13/07/2021
+ */
+
 package za.ac.cput.cms.booking.repository.room;
 
 import org.springframework.data.jpa.repository.JpaRepository;

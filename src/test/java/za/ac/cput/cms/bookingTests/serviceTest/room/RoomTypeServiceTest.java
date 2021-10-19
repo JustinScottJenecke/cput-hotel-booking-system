@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class RoomTypeServiceTest {
     @Autowired
-    private RoomTypeService service;
+    private RoomTypeService service = new RoomTypeService();
 
     private static RoomType roomType = RoomTypeFactory.createRoomType(
             251,

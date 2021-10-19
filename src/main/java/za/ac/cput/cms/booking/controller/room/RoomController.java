@@ -3,6 +3,7 @@ package za.ac.cput.cms.booking.controller.room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.cms.booking.entity.room.Room;
+import za.ac.cput.cms.booking.entity.room.RoomContext;
 import za.ac.cput.cms.booking.service.room.impl.RoomService;
 
 /**
@@ -24,11 +25,17 @@ public class RoomController {
     }
 
     @PostMapping("/create")
+    public String creatR(@RequestBody RoomContext roomContext) {
+        System.out.println(roomContext);
+        return roomContext.toString();
+    }
+
+    /*@PostMapping("/create")
     public Room createRoom(@RequestBody Room room) {
 
         Room newRoom = new Room.Builder().copy(room).build();
         return this.roomService.create(newRoom);
-    }
+    }*/
 
     @GetMapping("/read/{id}")
     public Room readRoom(@PathVariable int id) {

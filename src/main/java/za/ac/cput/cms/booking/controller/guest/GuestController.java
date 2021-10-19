@@ -30,7 +30,7 @@ public class GuestController {
     }
 
     @GetMapping("/read/{id}")
-    public Guest readGuest(@PathVariable String id) {
+    public Guest readGuest(@PathVariable int id) {
         return this.guestService.read(id);
     }
 
@@ -42,7 +42,7 @@ public class GuestController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public Boolean deleteGuest(@PathVariable String id) {
+    public Boolean deleteGuest(@PathVariable int id) {
         return this.guestService.delete(id);
     }
 }

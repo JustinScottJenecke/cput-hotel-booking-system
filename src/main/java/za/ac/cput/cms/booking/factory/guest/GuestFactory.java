@@ -11,11 +11,14 @@ import za.ac.cput.cms.booking.entity.guest.ContactDetails;
 public class GuestFactory {
 
     public static Guest buildGuest(int guestId,
-                                   int logistics,
-                                   ContactDetails contactDetails
+                                   int logistics
+                                    //,ContactDetails contactDetails
 
     ){
-        Guest guest = new Guest.Builder().setGuestId(10).setContactDetails(contactDetails).setLogistics(10).build();
+        Guest guest = new Guest.Builder()
+                .setGuestId(10)
+                //.setContactDetails(contactDetails)
+                .setLogistics(10).build();
         return guest;
     }
 }

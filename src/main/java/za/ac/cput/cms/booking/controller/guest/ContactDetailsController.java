@@ -26,19 +26,19 @@ public class ContactDetailsController {
         return this.contactDetailsService.create(newContactDetails);
     }
 
-    @GetMapping("/read")
-    public ContactDetails read(@RequestBody ContactDetails contactDetails){
-        return contactDetailsService.read(contactDetails.getContactId());
+    @GetMapping("/read/{id}")
+    public ContactDetails read(@PathVariable String id){
+        return this.contactDetailsService.read(id);
     }
 
-    @PostMapping
+    @PostMapping("/update")
     public ContactDetails update(@RequestBody ContactDetails contactDetails){
         return contactDetailsService.update(contactDetails);
     }
 
-    @DeleteMapping("/delete")
-    public boolean delete(@PathVariable String contactId){
-        return contactDetailsService.delete(contactId);
+    @DeleteMapping("/delete/{id}")
+    public boolean delete(@PathVariable String id){
+        return this.contactDetailsService.delete(id);
     }
 
     @GetMapping("/getAll")

@@ -1,3 +1,11 @@
+package za.ac.cput.cms.bookingTests.factoryTest.roomTest;
+
+import org.junit.jupiter.api.Test;
+import za.ac.cput.cms.booking.entity.room.BedType;
+import za.ac.cput.cms.booking.factory.room.BedTypeFactory;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * 	BedTypeFactoryTest.java
  *	BedType Factory Test

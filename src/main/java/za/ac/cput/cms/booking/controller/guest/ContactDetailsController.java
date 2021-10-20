@@ -22,12 +22,8 @@ public class ContactDetailsController {
 
     @PostMapping("/create")
     public ContactDetails create(@RequestBody ContactDetails contactDetails){
-        ContactDetails newContactDetails = ContactDetailsFactory.createContactDetails(
-                contactDetails.getContactId(),
-                contactDetails.getCellNo(),
-                contactDetails.getEmail(),
-                contactDetails.getAddress());
-        return contactDetailsService.create(newContactDetails);
+        ContactDetails newContactDetails = new ContactDetails.Builder().copy(contactDetails).build();
+        return this.contactDetailsService.create(newContactDetails);
     }
 
     @GetMapping("/read")

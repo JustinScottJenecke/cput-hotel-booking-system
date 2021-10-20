@@ -7,11 +7,14 @@ ContactDetails.java
 package za.ac.cput.cms.booking.entity.guest;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class ContactDetails {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  String contactId;
     private int cellNo;
     private String email;

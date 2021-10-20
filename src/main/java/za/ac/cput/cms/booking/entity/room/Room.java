@@ -16,6 +16,7 @@ import java.util.Set;
 public class Room {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int roomNo;
 
     private int bedType;

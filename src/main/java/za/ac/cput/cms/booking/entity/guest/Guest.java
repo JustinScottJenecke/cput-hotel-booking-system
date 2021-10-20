@@ -1,6 +1,8 @@
 package za.ac.cput.cms.booking.entity.guest;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.OneToOne;
 import za.ac.cput.cms.booking.entity.guest.ContactDetails;
 /**
@@ -11,6 +13,7 @@ import za.ac.cput.cms.booking.entity.guest.ContactDetails;
 @Entity
 public class Guest {
     @Id
+    @GeneratedValue
     private int guestId;
 
     private int logistics;

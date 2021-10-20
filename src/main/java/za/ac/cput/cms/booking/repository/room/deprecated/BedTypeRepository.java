@@ -1,4 +1,4 @@
-/**
+package za.ac.cput.cms.booking.repository.room.deprecated; /**
  * 	BedTypeRepository.java
  *	BedType Repository
  *
@@ -8,9 +8,9 @@
  */
 import java.util.ArrayList;
 import java.util.List;
-
-public class BedTypeRepository {
-
+@Deprecated
+public class BedTypeRepository {}
+/*
 private static BedTypeRepository bedTypeRepository = null;
     private List<BedType> bedTypeRepositoryDB = null;
 
@@ -68,4 +68,4 @@ private static BedTypeRepository bedTypeRepository = null;
     }
 
 
-}
+}*/

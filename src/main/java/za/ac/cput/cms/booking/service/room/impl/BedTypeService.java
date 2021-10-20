@@ -1,3 +1,11 @@
+package za.ac.cput.cms.booking.service.room.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import za.ac.cput.cms.booking.entity.room.BedType;
+import za.ac.cput.cms.booking.repository.room.IBedTypeRepository;
+import za.ac.cput.cms.booking.service.room.IBedTypeService;
+
 /**
  * 	BedTypeService.java
  *	BedType Service
@@ -7,8 +15,34 @@
  * @Group 10
  */
 
-public class BedTypeService {
+@Service
+public class BedTypeService implements IBedTypeService {
 
+    @Autowired
+    private IBedTypeRepository bedTypeRepository;
+
+    @Override
+    public BedType create(BedType bedType) {
+        return this.bedTypeRepository.save(bedType);
+    }
+
+    @Override
+    public BedType read(String s) {
+        return this.bedTypeRepository.findById(s).orElseGet(null);
+    }
+
+    @Override
+    public BedType update(BedType bedType) {
+        return this.bedTypeRepository.save(bedType);
+    }
+
+    @Override
+    public boolean delete(String s) {
+        this.bedTypeRepository.deleteById(s);
+        return !this.bedTypeRepository.existsById(s);
+    }
+}
+/*
     private static BedTypeService service = null;
     private BedTypeRepository repository = null;
 
@@ -41,4 +75,4 @@ public class BedTypeService {
     public boolean delete(String ID) {
         return this.repository.delete(ID);
     }
-}
+}*/

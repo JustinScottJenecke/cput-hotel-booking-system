@@ -29,7 +29,7 @@ public class GuestController {
         return this.guestService.create(newGuest);
     }
 
-    @GetMapping("/read/{id}")
+    @GetMapping("/read")
     public Guest readGuest(@PathVariable int id) {
         return this.guestService.read(id);
     }

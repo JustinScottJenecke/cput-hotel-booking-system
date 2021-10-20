@@ -16,9 +16,9 @@ public class GuestFactory {
 
     ){
         Guest guest = new Guest.Builder()
-                .setGuestId(10)
+                .setGuestId(guestId)
                 //.setContactDetails(contactDetails)
-                .setLogistics(10).build();
+                .setLogistics(logistics).build();
         return guest;
     }
 }

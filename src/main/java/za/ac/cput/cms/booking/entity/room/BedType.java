@@ -1,3 +1,7 @@
+package za.ac.cput.cms.booking.entity.room;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * 	BedType.java
@@ -8,13 +12,18 @@
  * @Group 10
  */
 
+@Entity
 public class BedType {
 
-	public String bedTypeId;
-	public String type;
-	public double cost;
+	@Id
+	private String bedTypeId;
+	private String type;
+	private double cost;
 
-	public BedType(Builder builder){
+	protected BedType() {
+	}
+
+	private BedType(Builder builder ){
 
 		this.bedTypeId = builder.bedTypeId;
 		this.type = builder.type;
@@ -22,19 +31,30 @@ public class BedType {
 
 	}
 
-	public String getBedTypeId(){
+	public String getBedTypeId() {
 		return bedTypeId;
 	}
-	public String getType(){
+
+	public String getType() {
 		return type;
 	}
-	public double getCost(){
-		return
+
+	public double getCost() {
+		return cost;
+	}
+
+	@Override
+	public String toString() {
+		return "BedType{" +
+				"bedTypeId='" + bedTypeId + '\'' +
+				", type='" + type + '\'' +
+				", cost=" + cost +
+				'}';
 	}
 
 	public static class Builder{
 
-		public int bedTypeId;
+		public String bedTypeId;
 		public String type;
 		public double cost;
 

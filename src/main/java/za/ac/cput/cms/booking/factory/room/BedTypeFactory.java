@@ -1,4 +1,7 @@
 package za.ac.cput.cms.booking.factory.room;
+
+import za.ac.cput.cms.booking.entity.room.BedType;
+
 /**
  * 	BedType Factory.java
  *	BedType Factory
@@ -23,5 +26,6 @@ public class BedTypeFactory {
 				.build();
 
 		return bedType;
+	}
 
 }

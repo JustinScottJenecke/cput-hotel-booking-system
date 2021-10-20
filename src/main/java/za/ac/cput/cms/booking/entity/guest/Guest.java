@@ -1,10 +1,11 @@
 package za.ac.cput.cms.booking.entity.guest;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+
+import za.ac.cput.cms.booking.entity.booking.Booking;
 import za.ac.cput.cms.booking.entity.guest.ContactDetails;
+
+import java.util.Set;
+
 /**
  * Author: Shameel Kiyang 217050743
  * POJO Guest.Class
@@ -13,19 +14,22 @@ import za.ac.cput.cms.booking.entity.guest.ContactDetails;
 @Entity
 public class Guest {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int guestId;
 
     private int logistics;
-    //@OneToOne
-    //private ContactDetails contactDetails;
+    @OneToOne
+    private ContactDetails contactDetails;
+
+    @OneToMany
+    private Set<Booking> bookings;
 
     protected Guest(){}
 
     private Guest(Builder b){
         this.guestId= b.guestId;
         this.logistics=b.logistics;
-       // this.contactDetails=b.contactDetails;
+        this.contactDetails=b.contactDetails;
     }
 
     public int getGuestId() {
@@ -36,16 +40,16 @@ public class Guest {
         return logistics;
     }
 
-    //public ContactDetails getContactDetails() {
-        //return contactDetails;
-    //}
+    public ContactDetails getContactDetails() {
+        return contactDetails;
+    }
 
     @Override
     public String toString() {
         return "Guest{" +
                 "guestId=" + guestId +
                 ", logistics=" + logistics +
-                //", contactDetails=" + contactDetails +
+                ", contactDetails=" + contactDetails +
                 '}';
     }
 
@@ -54,6 +58,7 @@ public class Guest {
 
         private int logistics;
         private ContactDetails contactDetails;
+        private Set<Booking> bookings;
 
         public Builder setGuestId(int guestId) {
             this.guestId = guestId;
@@ -69,10 +74,17 @@ public class Guest {
             this.contactDetails = contactDetails;
             return this;
         }
+
+        public Builder setBookings(Set<Booking> bookings) {
+            this.bookings = bookings;
+            return this;
+        }
+
         public Builder copy(Guest g){
             this.guestId= g.guestId;
             this.logistics=g.logistics;
-            //this.contactDetails=g.contactDetails;
+            this.contactDetails=g.contactDetails;
+            this.bookings = g.bookings;
             return this;
         }
         public Guest build(){return new Guest(this);}

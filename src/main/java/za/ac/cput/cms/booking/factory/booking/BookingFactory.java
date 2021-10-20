@@ -1,6 +1,8 @@
 package za.ac.cput.cms.booking.factory.booking;
 
 import za.ac.cput.cms.booking.entity.booking.Booking;
+import za.ac.cput.cms.booking.entity.guest.Guest;
+import za.ac.cput.cms.booking.entity.room.Room;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -13,7 +15,7 @@ import java.util.Set;
 
 public class BookingFactory {
 
-    public static Booking buildBooking(String bookingId, int room, int guest, Set<LocalDate>daysBooked, int baseCost) {
+    public static Booking buildBooking(String bookingId, Room room, Guest guest, Set<LocalDate>daysBooked, int baseCost) {
 
         Booking booking = new Booking.Builder()
                 .setBookingId(bookingId)

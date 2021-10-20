@@ -6,10 +6,7 @@ ContactDetails.java
  */
 package za.ac.cput.cms.booking.entity.guest;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class ContactDetails {
@@ -20,6 +17,9 @@ public class ContactDetails {
     private String email;
     private String address;
 
+    @OneToOne
+    private Guest guest;
+
     protected ContactDetails(){
 
     }
@@ -29,6 +29,7 @@ public class ContactDetails {
         this.cellNo = b.cellNo;
         this.email = b.email;
         this.address = b.address;
+        this.guest = b.guest;
     }
 
     public String getContactId() {
@@ -44,13 +45,18 @@ public class ContactDetails {
         return address;
     }
 
+    public Guest getGuest() {
+        return guest;
+    }
+
     @Override
     public String toString() {
         return "ContactDetails{" +
-                "contactId=" + contactId +
+                "contactId='" + contactId + '\'' +
                 ", cellNo=" + cellNo +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
+                ", guest=" + guest +
                 '}';
     }
 
@@ -59,6 +65,7 @@ public class ContactDetails {
         private int cellNo;
         private String email;
         private String address;
+        private Guest guest;
 
         public Builder setContactId(String contactId){
             this.contactId = contactId;
@@ -80,6 +87,11 @@ public class ContactDetails {
             return this;
         }
 
+        public Builder setGuest(Guest guest) {
+            this.guest = guest;
+            return this;
+        }
+
         public ContactDetails build(){
             return new ContactDetails(this);
         }
@@ -89,6 +101,7 @@ public class ContactDetails {
             this.cellNo = c.cellNo;
             this.email = c.email;
             this.address = c.address;
+            this.guest = c.guest;
             return this;
         }
     }

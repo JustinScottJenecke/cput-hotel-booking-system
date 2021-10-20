@@ -7,6 +7,8 @@ package za.ac.cput.cms.booking.entity.booking;
  * */
 
 import org.apache.tomcat.jni.Local;
+import za.ac.cput.cms.booking.entity.guest.Guest;
+import za.ac.cput.cms.booking.entity.room.Room;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -18,8 +20,11 @@ public class Booking {
     @Id
     private String bookingId;
 
-    private int room;
-    private int guest;
+    @ManyToOne
+    private Room room;
+
+    @ManyToOne
+    private Guest guest;
 
     @ElementCollection
     private Set <LocalDate> daysBooked;
@@ -40,11 +45,11 @@ public class Booking {
         return bookingId;
     }
 
-    public int getRoom() {
+    public Room getRoom() {
         return room;
     }
 
-    public int getGuest() {
+    public Guest getGuest() {
         return guest;
     }
 
@@ -70,8 +75,8 @@ public class Booking {
     public static class Builder {
 
         private String bookingId;
-        private int room;
-        private int guest;
+        private Room room;
+        private Guest guest;
         private Set <LocalDate> daysBooked;
         private int cost;
 
@@ -80,12 +85,12 @@ public class Booking {
             return this;
         }
 
-        public Builder setRoom(int room) {
+        public Builder setRoom(Room room) {
             this.room = room;
             return this;
         }
 
-        public Builder setGuest(int guest) {
+        public Builder setGuest(Guest guest) {
             this.guest = guest;
             return this;
         }

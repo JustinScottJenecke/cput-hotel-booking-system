@@ -3,6 +3,8 @@ package za.ac.cput.cms.bookingTests.factoryTest.booking;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.cms.booking.entity.booking.Booking;
+import za.ac.cput.cms.booking.entity.guest.Guest;
+import za.ac.cput.cms.booking.entity.room.Room;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -22,11 +24,16 @@ public class BookingFactoryTest {
 
     Set<LocalDate> testDataList;
     Set <LocalDate> stayDuration;
+    Guest guest;
+    Room room;
 
     @BeforeEach
     void setup() {
         testDataList = new HashSet<>();
         stayDuration = new HashSet<>();
+
+        room = new Room.Builder().build();
+        guest = new Guest.Builder().build();
     }
 
     @Test
@@ -34,15 +41,15 @@ public class BookingFactoryTest {
 
         Booking booking = new Booking.Builder()
                 .setBookingId("SHA-2-b")
-                .setRoom(2)
-                .setGuest(2)
+                .setRoom(room)
+                .setGuest(guest)
                 .setDaysBooked(stayDuration)
                 .setCost(2000 * stayDuration.toArray().length)
                 .build();
 
         assertEquals("SHA-2-b",booking.getBookingId());
-        assertEquals(2,booking.getRoom());
-        assertEquals(2,booking.getGuest());
+        assertEquals(room,booking.getRoom());
+        assertEquals(guest,booking.getGuest());
         assertEquals(testDataList,booking.getDaysBooked());
         assertEquals(0,booking.getCost());
     }

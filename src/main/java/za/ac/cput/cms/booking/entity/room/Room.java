@@ -19,7 +19,10 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int roomNo;
 
-    private int bedType;
+    @ManyToOne
+    @JoinColumn
+    private BedType bedType;
+
     private int roomType;
 
     @Enumerated
@@ -45,7 +48,7 @@ public class Room {
         return roomNo;
     }
 
-    public int getBedType() {
+    public BedType getBedType() {
         return bedType;
     }
 
@@ -80,7 +83,7 @@ public class Room {
     public static class Builder{
 
         private int roomNo;
-        private int bedType;
+        private BedType bedType;
         private int roomType;
         private RoomDetails roomDetails;
         private Set<LocalDate> bookingCalendar;
@@ -91,7 +94,7 @@ public class Room {
             return this;
         }
 
-        public Builder setBedType(int bedType) {
+        public Builder setBedType(BedType bedType) {
             this.bedType = bedType;
             return this;
         }

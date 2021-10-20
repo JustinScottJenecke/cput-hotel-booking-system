@@ -1,7 +1,8 @@
 package za.ac.cput.cms.booking.entity.room;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 /**
  * 	BedType.java
@@ -19,6 +20,9 @@ public class BedType {
 	private String bedTypeId;
 	private String type;
 	private double cost;
+
+	@OneToMany
+	private Set<Room> room;
 
 	protected BedType() {
 	}

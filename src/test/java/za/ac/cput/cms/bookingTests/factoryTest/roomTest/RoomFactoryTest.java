@@ -37,7 +37,7 @@ public class RoomFactoryTest {
 
         Room room = new Room.Builder()
                 .setRoomNo(101)
-                .setBedType(2)
+                .setBedType(null)
                 .setRoomType(5)
                 .setRoomDetails(details) // OR setRoomDetails(RoomDetails.findByFloor(2))
                 .setBookingCalendar(bookingCalendar)
@@ -49,7 +49,7 @@ public class RoomFactoryTest {
 
         assertNotNull(details);
         assertEquals(101, room.getRoomNo());
-        assertEquals(2, room.getBedType());
+        assertEquals(null, room.getBedType());
         assertEquals(5, room.getRoomType());
         assertEquals(RoomDetails.SECOND_FLOOR,room.getRoomDetails());
         assertEquals(bookingCalendar, room.getBookingCalendar());

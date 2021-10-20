@@ -23,7 +23,7 @@ public class RoomFactory {
 
         Room room = new Room.Builder()
                 .setRoomNo(101)
-                .setBedType(2)
+                .setBedType(null)
                 .setRoomType(5)
                 .setRoomDetails(roomDetails)
                 .setBookingCalendar(bookingCalendar)

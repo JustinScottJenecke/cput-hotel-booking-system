@@ -10,10 +10,10 @@ public class RoomContext {
 
     private Room room;
     int roomDetails;
-    int bedType;
+    String bedType;
     int roomType;
 
-    public RoomContext(Room room, int roomDetails, int bedType, int roomType) {
+    public RoomContext(Room room, int roomDetails, String bedType, int roomType) {
         this.room = room;
         this.roomDetails = roomDetails;
         this.bedType = bedType;
@@ -36,11 +36,11 @@ public class RoomContext {
         this.roomDetails = roomDetails;
     }
 
-    public int getBedType() {
+    public String getBedType() {
         return bedType;
     }
 
-    public void setBedType(int bedType) {
+    public void setBedType(String bedType) {
         this.bedType = bedType;
     }
 

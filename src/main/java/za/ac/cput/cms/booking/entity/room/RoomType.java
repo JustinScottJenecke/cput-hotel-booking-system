@@ -8,12 +8,15 @@
 package za.ac.cput.cms.booking.entity.room;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class RoomType {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int roomTypeId;
 
     private String type;

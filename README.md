@@ -10,14 +10,17 @@ Date compiled: 14 September 2021
   less workload and more focus on developing a microservice within the bounded context of a booking system.
 
 ## Technology stack remains mostly unchanged from previous project:
-  - ####Java
-  - ####Spring-Boot
-  - ####Hibernate
-  - ####MySQL
-  - ####Thymeleaf
+  - Java
+  - Spring-Boot
+  - Apache Maven
+  - Hibernate
+  - MySQL
+  - Thymeleaf
+  
 
 ## Additions of:
-  - ####H2 (Repository Testing)
+  - H2 (Repository Testing)
+  - Spring Security
 
 ## The main Entities concerned are
 

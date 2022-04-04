@@ -28,7 +28,7 @@ Date compiled: 14 September 2021
   The Room entity is a concrete class that holds information on the different rooms inside the hotel such as cost, floor, etc.
   It also has internal state which is used when creating bookings to ensure no two users can reserve/book the same room on the same date.
   
-####Room has four associated composition classes:
+Room has four associated composition classes:
     BedType  -  class / entity
     RoomType  -  class / entity
     RoomDetails  -  enum / value object
@@ -39,7 +39,7 @@ Date compiled: 14 September 2021
   Guest entity is a concrete class meant to represent guests registered on a hotel's system, and they will need 
   to register in order to book a room and stay at the hotel.
   
-  ####Guest has three associated composition classes:
+  Guest has three associated composition classes:
      Particulars  -  class / entity
      ContactDetails   -  class / entity
      Logistics  -  class / entity
